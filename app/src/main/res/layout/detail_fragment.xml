@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/parallaxImg"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <ImageView
+                android:id="@+id/sunnyIcon"
+                android:layout_width="@dimen/big_icon_size"
+                android:layout_height="@dimen/big_icon_size"
+                android:src="@drawable/ic_baseline_wb_sunny_24"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:alpha="0"
+                android:scaleType="centerCrop" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/realPropertyToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="@string/toolbar_label"
+                app:titleTextColor="?attr/colorPrimary" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/realPropertyImg"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <View
+            android:id="@+id/realPropertyInfoBackground"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@drawable/background_image"
+            android:translationY="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/realPropertyImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/realPropertyPriceContainer"
+            android:layout_width="@dimen/price_container_width"
+            android:layout_height="@dimen/price_container_height"
+            android:background="@drawable/background_rounded_light"
+            android:translationY="-16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/realPropertyInfoBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyInfoBackground">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/realPropertyPricePrefix"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prix"
+                app:layout_constraintBottom_toTopOf="@+id/realPropertyPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/realPropertyPrice"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/realPropertyPricePrefix"
+                tools:text="400 000 €" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyType"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyPriceContainer"
+            tools:text="villa" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyOtherInfos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyType"
+            tools:text="Aix en Provence | 1500 m2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyRoomInfos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyOtherInfos"
+            tools:text="3 pièces | 2 chambres" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyDescription"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/description_label"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyRoomInfos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Description sur plusieurs lignes qui prends du coup pas mal de place. C'est dingue toute cette description !" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

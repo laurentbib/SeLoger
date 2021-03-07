@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SeLoger</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_fragment_label">Main</string>
+    <string name="detail_fragment_label">Detail</string>
+
+    <!-- Strings used for transition -->
+    <string name="transition_img">transition_img %d</string>
+    <string name="transition_price">transition_price %d</string>
+    <string name="transition_background">transition_background %d</string>
+    <string name="transition_type">transition_type %d</string>
+    <string name="transition_other_infos">transition_other_infos %d</string>
+    <string name="transition_price_container">transition_price_container %d</string>
+    <string name="transition_price_prefix">transition_prefix %d</string>
+
+    <string name="price_label">Price</string>
+    <string name="description_label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <plurals name="bedrooms_label">
+        <item quantity="one">%1$d bedroom</item>
+        <item quantity="other">%1$d bedrooms</item>
+    </plurals>
+    <plurals name="total_rooms_label">
+        <item quantity="one">%1$d room</item>
+        <item quantity="other">%1$d rooms</item>
+    </plurals>
+
+    <string name="toolbar_label">Good deal</string>
+
+
+</resources>

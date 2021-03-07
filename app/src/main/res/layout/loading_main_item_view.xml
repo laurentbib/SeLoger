@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin"
+    android:background="@drawable/background_rounded_light">
+
+    <View
+        android:id="@+id/shimmerRealPropertyImg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/picture_view_height"
+        android:background="@drawable/background_shimmer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/shimmerRealPropertyInfoBackground"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/background_image"
+        app:layout_constraintBottom_toBottomOf="@+id/shimmerRealPropertyImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/shimmerRealPropertyPriceContainer"
+        android:layout_width="@dimen/price_container_width"
+        android:layout_height="@dimen/price_container_height"
+        android:background="@drawable/background_rounded_light"
+        android:padding="@dimen/default_padding"
+        app:layout_constraintBottom_toBottomOf="@+id/shimmerRealPropertyInfoBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/shimmerRealPropertyPrice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/background_shimmer_view"
+        app:layout_constraintBottom_toBottomOf="@+id/shimmerRealPropertyPriceContainer"
+        app:layout_constraintEnd_toEndOf="@+id/shimmerRealPropertyPriceContainer"
+        app:layout_constraintStart_toStartOf="@+id/shimmerRealPropertyPriceContainer"
+        app:layout_constraintTop_toTopOf="@+id/shimmerRealPropertyPriceContainer" />
+
+    <View
+        android:id="@+id/shimmerRealPropertyType"
+        android:layout_width="200dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/background_shimmer_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmerRealPropertyInfoBackground" />
+
+    <View
+        android:id="@+id/shimmerRealPropertyTypeOtherInfos"
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/background_shimmer_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmerRealPropertyType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

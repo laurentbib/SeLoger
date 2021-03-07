@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dayPrimary">#ef5350</color>
+    <color name="dayPrimaryDark">#a6000f</color>
+    <color name="dayBackground">@color/white</color>
+    <color name="daySurface">@color/white</color>
+
+    <color name="nightPrimary">#37474f</color>
+    <color name="nightPrimaryDark">#102027</color>
+    <color name="nightBackground">#37474f</color>
+    <color name="nightSurface">#62727b</color>
+
+
+    <color name="dayShimmerBackground">#E0E0E0</color>
+    <color name="dayShimmerView">#CFD8DC</color>
+</resources>

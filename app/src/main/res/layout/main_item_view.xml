@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin"
+    app:cardElevation="5dp"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/realPropertyImg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/picture_view_height"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <View
+        android:id="@+id/realPropertyInfoBackground"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/background_image"
+        app:layout_constraintBottom_toBottomOf="@+id/realPropertyImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/realPropertyPriceContainer"
+        android:layout_width="@dimen/price_container_width"
+        android:layout_height="@dimen/price_container_height"
+        android:background="@drawable/background_rounded_light"
+        app:layout_constraintBottom_toBottomOf="@+id/realPropertyInfoBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyPricePrefix"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix"
+            app:layout_constraintBottom_toTopOf="@+id/realPropertyPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realPropertyPrice"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/realPropertyPricePrefix"
+            tools:text="400 000 €" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/realPropertyType"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:padding="@dimen/default_padding"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realPropertyPriceContainer"
+        tools:text="Villa" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/realPropertyTypeOtherInfos"
+        android:padding="@dimen/default_padding"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realPropertyType"
+        tools:text="Aix en Provence | 1500 m2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
